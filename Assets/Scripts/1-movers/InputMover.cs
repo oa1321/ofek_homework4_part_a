@@ -7,26 +7,30 @@ using UnityEngine.InputSystem;
 /**
  * This component moves its object when the player clicks the arrow keys.
  */
-public class InputMover: MonoBehaviour {
+public class InputMover : MonoBehaviour
+{
     [Tooltip("Speed of movement, in meters per second")]
     [SerializeField] float speed = 10f;
 
     [SerializeField] InputAction moveHorizontal = new InputAction(type: InputActionType.Button);
-    [SerializeField] InputAction moveVertical  = new InputAction(type: InputActionType.Button);
+    [SerializeField] InputAction moveVertical = new InputAction(type: InputActionType.Button);
 
 
-    void OnEnable()  {
+    void OnEnable()
+    {
         moveHorizontal.Enable();
         moveVertical.Enable();
     }
 
-    void OnDisable()  {
+    void OnDisable()
+    {
         moveHorizontal.Disable();
         moveVertical.Disable();
     }
 
 
-    void Update() {
+    void Update()
+    {
         float horizontal = moveHorizontal.ReadValue<float>();
         float vertical = moveVertical.ReadValue<float>();
         Vector3 movementVector = new Vector3(horizontal, vertical, 0) * speed * Time.deltaTime;
