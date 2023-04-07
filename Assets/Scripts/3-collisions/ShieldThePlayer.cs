@@ -12,7 +12,7 @@ public class ShieldThePlayer : MonoBehaviour
         {
             var x = other.transform.Find("Circle");
             Debug.Log("Shield triggered by player");
-            var destroyComponent = other.GetComponent<DestroyOnTrigger2D>();
+            var destroyComponent = other.GetComponent<goto_lose_on_colide>();
             Renderer circleRenderer = x.GetComponent<Renderer>();
             if (destroyComponent)
             {
@@ -29,7 +29,7 @@ public class ShieldThePlayer : MonoBehaviour
         }
     }
 
-    private IEnumerator ShieldTemporarily(DestroyOnTrigger2D destroyComponent, Renderer c)
+    private IEnumerator ShieldTemporarily(goto_lose_on_colide destroyComponent, Renderer c)
     {   // co-routines
         // private async void ShieldTemporarily(DestroyOnTrigger2D destroyComponent) {      // async-await
         Color currentColor = c.material.color;
