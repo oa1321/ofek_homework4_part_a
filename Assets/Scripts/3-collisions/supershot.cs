@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class supershot : MonoBehaviour
 {
-    [Tooltip("The number of seconds that the shield remains active")][SerializeField] float duration;
+    [Tooltip("The number of seconds that the powerup remains active")][SerializeField] float duration;
     [SerializeField] protected GameObject new_prefabToSpawn;
     private void OnTriggerEnter2D(Collider2D other)
     {
