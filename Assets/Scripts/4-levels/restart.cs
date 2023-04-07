@@ -8,16 +8,17 @@ public class restart : MonoBehaviour
 {
     [SerializeField] string sceneName;
     [SerializeField] string menuName;
-    
+
     public void RestartGame()
     {
-            SceneManager.LoadScene(sceneName);    // Input can either be a serial number or a name; here we use name.
+        SceneManager.LoadScene(sceneName);    // Input can either be a serial number or a name; here we use name.
     }
-    public void quitGame(){
+    public void quitGame()
+    {
         Application.Quit();
     }
     public void menuGame()
     {
-            SceneManager.LoadScene(menuName);    // Input can either be a serial number or a name; here we use name.
+        SceneManager.LoadScene(menuName);    // Input can either be a serial number or a name; here we use name.
     }
 }
