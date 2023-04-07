@@ -16,16 +16,13 @@ public class ShieldThePlayer : MonoBehaviour
             Renderer circleRenderer = x.GetComponent<Renderer>();
             if (destroyComponent)
             {
-                destroyComponent.StartCoroutine(ShieldTemporarily(destroyComponent, circleRenderer));        // co-routines
-                                                                                                             // NOTE: If you just call "StartCoroutine", then it will not work, 
-                                                                                                             //       since the present object is destroyed!
-                                                                                                             // ShieldTemporarily(destroyComponent);                                      // async-await
+                destroyComponent.StartCoroutine(ShieldTemporarily(destroyComponent, circleRenderer));
                 Destroy(gameObject);  // Destroy the shield itself - prevent double-use
             }
         }
         else
         {
-            Debug.Log("Shield triggered by " + other.name);
+            Debug.Log("Shield triggered by  " + other.name);
         }
     }
 
