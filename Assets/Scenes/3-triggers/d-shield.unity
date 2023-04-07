@@ -449,6 +449,24 @@ MonoBehaviour:
   minTimeBetweenSpawns: 8
   maxTimeBetweenSpawns: 15
   maxXDistance: 25
+--- !u!114 &750246244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441582033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab63d9ef6fc24b4792a19faafaad16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 7550734854550265076, guid: bd7ec6415f998bf49a59f8af2e42cbd0,
+    type: 3}
+  velocityOfSpawnedObject: {x: 0, y: -5, z: 0}
+  minTimeBetweenSpawns: 4
+  maxTimeBetweenSpawns: 19
+  maxXDistance: 25
 --- !u!1 &945324278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,7 +1373,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 12.620846
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1411,7 +1429,7 @@ PrefabInstance:
     - target: {fileID: 1643865928697227468, guid: 988973ad449c16343aee623d3353a39f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.2
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: 1643865928697227468, guid: 988973ad449c16343aee623d3353a39f,
         type: 3}
